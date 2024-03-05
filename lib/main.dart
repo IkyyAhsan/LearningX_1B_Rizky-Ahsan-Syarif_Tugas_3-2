@@ -50,70 +50,49 @@ class MyApp extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            const Padding(
-                padding: EdgeInsets.only(left: 20, right: 20),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Give your recipe a name",
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
-                    TextField(
+                    const TextField(
                       style: TextStyle(height: 2),
                       decoration: InputDecoration(
                         hintText: 'Masukkan Nama Menu',
                         hintStyle: TextStyle(fontSize: 14), // Set font size for hint text
                       ),
                     ),
-                  ],
-                )),
-            const SizedBox(height: 30),
-            const Padding(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Estimasi waktu memasak (menit)",
+                    const SizedBox(height: 30),
+                    const Text("Estimasi waktu memasak (menit)",
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         hintText: 'Masukkan waktu pembuatan',
                         hintStyle: TextStyle(fontSize: 14), // Set font size for hint text
                       ),
                     ),
-                  ],
-                )),
-            const SizedBox(height: 30),
-            const Padding(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Deskripsi",
+                    const SizedBox(height: 30),
+                    const Text("Deskripsi",
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
-                    TextField(
-                      style: TextStyle(height: 5),
+                    const TextField(
+                      style: TextStyle(height: 7),
                       decoration: InputDecoration(
                         hintText: 'Masukkan Deskripsi',
                         hintStyle: TextStyle(fontSize: 14), // Set font size for hint text
                       ),
                     ),
-                  ],
-                )),
-            const SizedBox(height: 30),
-            Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                    const SizedBox(height: 30),
                     const Text("Resep, bahan dan langkah",
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     const TextField(
-                      style: TextStyle(height: 5),
+                      style: TextStyle(height: 7),
                       decoration: InputDecoration(
                         hintText: 'Masukkan Resep dan Cara Pembuatan',
                         hintStyle: TextStyle(fontSize: 14), // Set font size for hint text
@@ -129,11 +108,17 @@ class MyApp extends StatelessWidget {
                             backgroundColor: Colors.red,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10))),
-                        child: const Text('Add Menu', style: TextStyle(color: Colors.white, fontSize: 15)),
+                        child: const Text('Add Menu', 
+                          style: TextStyle(
+                            color: Colors.white, 
+                            fontSize: 15
+                          )
+                        ),
                       ),
-                    )
+                    ),
                   ],
-                )),
+                )
+            ),
           ],
         ),
       ),
